@@ -85,7 +85,7 @@ function wrappingPrice(){ //wrappingPrice() adds the price of wrapping if checkb
 function calculateTotal(){// Here the price is caculatet based on previus choices 
     var merchPrice = getmerchStickerPrice() + getmerchSticker2Price() + getmerchSticker3Price() + getmerchSticker4Price() + wrappingPrice(); // The price of the first sticker+sticker2+sticker3+sticker4 and wrapping ia added together 
     var priceresult = document.getElementById('totalPrice'); //display the result
-    priceresult.style.display='block'; //KENDER IKKE FUNKTIONEN,VIRKER UDEN
+    priceresult.style.display='block';
     priceresult.innerHTML = "Total Price $"+merchPrice; //price shown in the HTML file 
 
 }
@@ -93,6 +93,5 @@ function calculateTotal(){// Here the price is caculatet based on previus choice
 //Hiddin on loade of HTML
 function hideTotal(){ //price is hidden upon lode of the page, the tag is found the the body tag of the HTML file
     var priceresult = document.getElementById('totalPrice');//this is what is hidden until its called upon
-    priceresult.style.display='none'; //KENDER IKKE FUNKTIONEN,VIRKER UDEN
-}
+    priceresult.style.display='none'; 
 

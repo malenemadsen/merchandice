@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cake Form</title>
+    <script  src="java.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	
+</head>
+	
+<body onload="hideTotal();"> <!--This hides the result when the page is loaded-->
+    <div id="wrap">
+        <form action="" id="merchform" onsubmit="return false;">
+        <div class="container-fluid">
+            <div class="cont_order">
+               <fieldset>
+                <legend>Suport us today</legend>
+                <div >Sticker type 1</div>
+				<div class="row">
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="stickeramount" value="3pack" onclick="calculateTotal();" />Pack of 3 ($3)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="stickeramount" value="5pack" onclick="calculateTotal();" />Pack of 5 ($4)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="stickeramount" value="10pack" onclick="calculateTotal();" />Pack of 10 ($5)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="stickeramount" value="20pack" onclick="calculateTotal();" />Pack of 20 ($7)</label>
+                <br/>
+                </div>
+				   
+				<div>Sticker type 2</div>
+				<div class="row">
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker2amount" value="3pack" onclick="calculateTotal();" />Pack of 3 ($3)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker2amount" value="5pack" onclick="calculateTotal();" />Pack of 5 ($4)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker2amount" value="10pack" onclick="calculateTotal();" />Pack of 10 ($5)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker2amount" value="20pack" onclick="calculateTotal();" />Pack of 20 ($7)</label>
+                <br/>
+				</div>
+					
+				<div>Sticker type 2</div>
+				<div class="row">
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker3amount" value="3pack" onclick="calculateTotal();" />Pack of 3 ($3)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker3amount" value="5pack" onclick="calculateTotal();" />Pack of 5 ($4)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker3amount" value="10pack" onclick="calculateTotal();" />Pack of 10 ($5)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker3amount" value="20pack" onclick="calculateTotal();" />Pack of 20 ($7)</label>
+                <br/>
+				</div>
+				   
+				<div>Sticker type 2</div>
+			    <div class="row">
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker4amount" value="3pack" onclick="calculateTotal();" />Pack of 3 ($3)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker4amount" value="5pack" onclick="calculateTotal();" />Pack of 5 ($4)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker4amount" value="10pack" onclick="calculateTotal();" />Pack of 10 ($5)</label>
+                <label class="radiolabel radio-bnt col-6 col-md-3"><input type="radio"  name="sticker4amount" value="20pack" onclick="calculateTotal();" />Pack of 20 ($7)</label>
+                <br/>   
+                </div>
+               <div>
+               <label for="includewrapping" class="inlinelabel">Include wrapping($3)</label>
+               <input type="checkbox" id="includewrapping" name="includewrapping" onclick="calculateTotal();" />
+               </div>
+               
+                
+                <div id="totalPrice"></div>
+                
+                </fieldset>
+            </div>
+            
+        	<div class="cont_details text-center">
+            	<fieldset>
+                <h5>Your information</h5>
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Full Name" id="fullname">
+						</div>
+						
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Email" id="">
+						</div>
+						
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Country" id="">
+						</div>
+						
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Address" id="">
+						</div>
+						
+						<div class="input_field mb-2">
+							<input type="text" placeholder="City" id="">
+						</div>
+						
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Postal code" id="">
+						</div>
+						
+						<h5>Payment information</h5>
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Name on card" id="">
+						</div>
+					
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Card number" id="">
+						</div>
+						
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Expiration (mm/yy)" id="">
+						</div>
+						
+						<div class="input_field mb-2">
+							<input type="text" placeholder="Security code" id="">
+						</div>
+					
+						<div class="btn">
+			 				<input class="rounded-pill px-2 py-1 border-0 knap" id = "button" type = "button" value = "Place order" onclick = "return validatepayment();">
+						</div>
+                </fieldset>
+            </div>
+			
+			
+			
+        </div>  
+       </form>
+	</div><!--End of wrap-->
+
+</body>
+</html>

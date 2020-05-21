@@ -32,7 +32,7 @@ function getmerchSticker2Price(){
         if(sticker2amount[i].checked)
         {
             merchSticker2Price = merch_prices[sticker2amount[i].value];
-            break;
+            
         }
     }
     return merchSticker2Price;
@@ -48,7 +48,7 @@ function getmerchSticker3Price(){
         if(sticker3amount[i].checked)
         {
             merchSticker3Price = merch_prices[sticker3amount[i].value];
-            break;
+           
         }
     }
     return merchSticker3Price;
@@ -64,7 +64,7 @@ function getmerchSticker4Price(){
         if(sticker4amount[i].checked)
         {
             merchSticker4Price = merch_prices[sticker4amount[i].value];
-            break;
+            
         }
     }
     return merchSticker4Price;
@@ -95,3 +95,4 @@ function hideTotal(){ //price is hidden upon lode of the page, the tag is found 
     var priceresult = document.getElementById('totalPrice');//this is what is hidden until its called upon
     priceresult.style.display='none'; 
 
+}
